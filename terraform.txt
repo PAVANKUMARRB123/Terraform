@@ -1,0 +1,22 @@
+azureuser@Azure:~$ terraform
+
+terraform --version
+
+az account list --query "[].{name:name, subscriptionId:id, tenantId:tenantId}"
+
+az account set --subscription="subscriptionId"
+
+az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/subscriptionId"
+
+create a folder test (mkdir) and inside the test folder create test.tf (vi command)    -- (file edit press o)
+
+terraform init
+
+terraform validate
+
+terraform apply
+
+yes
+
+example : 90b227d9-8cf6-4d83-884c-41f588652b77
+
